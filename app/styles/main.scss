@@ -163,7 +163,9 @@ $font-family-sans-serif: Quicksand;
   margin-left:20%;
   margin-right:20%;
   font-family: Open Sans;
-  border: 1px solid white;
+  border: 1px solid;
+  @include alpha-attribute('border-color', rgba(white, 0), black);
+  @include alpha-attribute('background-color', rgba(black, 0.3), white);
   h1 {
     font-weight: 700;
   }
@@ -178,6 +180,18 @@ $font-family-sans-serif: Quicksand;
   .home-content {
     margin-left:5%;
     margin-right:5%;
+  }
+}
+@media screen and (max-width: 480px) {
+  @media screen and (max-height: 680px) {
+    .home-content {
+      margin-top:250px;
+    }
+  }
+}
+@media screen and (max-height: 600px) {
+  .home-content {
+    margin-top:250px;
   }
 }
 
