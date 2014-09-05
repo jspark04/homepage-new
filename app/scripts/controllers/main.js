@@ -28,4 +28,6 @@ angular.module('homepageNewApp')
       speed: 3000
     });
 
+    $('.home-content').addClass('animated bounce');
+
   });

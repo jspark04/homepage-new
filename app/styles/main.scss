@@ -45,6 +45,15 @@ $font-family-sans-serif: Quicksand;
   bottom: 0px;
 }
 
+/* NG VIEW ANIMS */
+div[ng-view].ng-enter {
+  animation: fadeIn 1s;
+}
+
+div[ng-view].ng-leave {
+  animation: fadeOut 1s;
+}
+
 /* Header shiz */
 .background {
   /*@include background-image($background-image-top);*/
@@ -154,6 +163,8 @@ $font-family-sans-serif: Quicksand;
   .main-content {
     color: white;
     margin-top: 10px;
+    position: absolute;
+    width: 100%;
   }
 }
 
@@ -162,9 +173,12 @@ $font-family-sans-serif: Quicksand;
   margin-top:350px;
   margin-left:20%;
   margin-right:20%;
+  padding-top: 5px;
+  padding-bottom: 5px;
   font-family: Open Sans;
-  border: 1px solid;
-  @include alpha-attribute('border-color', rgba(white, 0), black);
+  border-left: 5px solid;
+  border-right: 5px solid;
+  @include alpha-attribute('border-color', rgba(#455868, 0.4), black);
   @include alpha-attribute('background-color', rgba(black, 0.3), white);
   h1 {
     font-weight: 700;
@@ -176,22 +190,22 @@ $font-family-sans-serif: Quicksand;
     color: white;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 775px) {
   .home-content {
     margin-left:5%;
     margin-right:5%;
   }
 }
-@media screen and (max-width: 480px) {
-  @media screen and (max-height: 680px) {
+@media screen and (max-width: 525px) {
+  @media screen and (max-height: 700px) {
     .home-content {
-      margin-top:250px;
+      margin-top:225px;
     }
   }
 }
-@media screen and (max-height: 600px) {
+@media screen and (max-height: 630px) {
   .home-content {
-    margin-top:250px;
+    margin-top:225px;
   }
 }
 
