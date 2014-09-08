@@ -176,10 +176,11 @@ div[ng-view].ng-leave {
   padding-top: 5px;
   padding-bottom: 5px;
   font-family: Open Sans;
-  border-left: 5px solid;
-  border-right: 5px solid;
-  @include alpha-attribute('border-color', rgba(#455868, 0.4), black);
-  @include alpha-attribute('background-color', rgba(black, 0.3), white);
+  border: 1px solid white;
+//  border-left: 5px solid;
+//  border-right: 5px solid;
+//  @include alpha-attribute('border-color', rgba(#455868, 0.4), black);
+//  @include alpha-attribute('background-color', rgba(black, 0.3), white);
   h1 {
     font-weight: 700;
   }
