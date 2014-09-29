@@ -19,8 +19,8 @@ angular.module('homepageNewApp')
     */
 
     //Set background images
-    $('body').removeClass();
-    $('body').addClass('contact-bg');
+    $('html').removeClass();
+    $('html').addClass('contact-bg');
 
 
 

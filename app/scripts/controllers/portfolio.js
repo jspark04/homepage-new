@@ -12,8 +12,8 @@ angular.module('homepageNewApp')
 
     $scope.test = 'test';
 
-//    $('.background').backstretch('images/bw_back_medium.jpg', {
-//      centeredY: false
-//    });
+    //Set background images
+    $('html').removeClass();
+    $('html').addClass('resume-bg');
 
   });

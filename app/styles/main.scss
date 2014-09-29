@@ -2,7 +2,8 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 //My images
 $background-image-main: image-url('bw_back_medium.jpg', false, false);
-$background-image-contact: image-url('bw_back_medium.jpg', false, false);
+$background-image-resume: image-url('resume_back_medium.jpg', false, false);
+$background-image-contact: image-url('contact_back_medium.jpg', false, false);
 
 $default-background-size: 100% auto;
 $min-height-background-img: 600px;
@@ -36,13 +37,96 @@ $link-color: #78a4ca;
 }
 
 //My stuff
-
 html {
-  -webkit-transition: background-image 1.5s linear;
-  -moz-transition: background-image 1.5s linear;
-  -o-transition: background-image 1.5s linear;
-  -ms-transition: background-image 1.5s linear;
-  transition: background-image 1.5s linear;
+  -webkit-transition: background-image 1.0s ease-in-out;
+  -moz-transition: background-image 1.0s ease-in-out;
+  -o-transition: background-image 1.0s ease-in-out;
+  -ms-transition: background-image 1.0s ease-in-out;
+  transition: background-image 1.0s ease-in-out;
+}
+
+/* RESUME SCSS */
+.resume-bg {
+  background: $background-image-resume no-repeat center center fixed;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  background-position: 50% 50%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.resume-container {
+  @include alpha-attribute('background-color', rgba(#000000, 0.6), #000000);
+
+  //Styling related to resume format
+  ul {
+    padding: 0;
+    list-style-type: none;
+  }
+
+  ul {
+
+    .resume-header {
+      border-bottom: 1px solid white;
+      margin-top: 10px;
+      font-size: 30px;
+    }
+
+    li {
+      //MAIN CATEGORY LIKE EDUCATION, EXPERIENCE
+      font-weight:bold;
+      border-bottom: 1px dotted #515151;
+      //background-color: purple;
+
+
+      .initiatives-list {
+        li {
+          font-weight: normal;
+          list-style-type: circle;
+          margin-left: 20px;
+          font-size: 12px;
+        }
+      }
+
+      ul{
+        //SCHOOL UL
+        .unstyle-location {
+          font-weight: normal;
+        }
+        .education-major {
+          font-weight: normal;
+          font-style: italic;
+        }
+        li {
+          //SCHOOL LI
+          font-weight: bold;
+          //background-color: green;
+          border-bottom: none;
+
+
+
+          ul li {
+            //SCHOOL DESCRIPTIVE LIST
+            //background-color: orange;
+            font-weight: normal;
+            font-size: 12px;
+            list-style-type: circle;
+            margin-left: 20px;
+          }
+
+        }
+      }
+
+    }
+
+  }
 }
 
 /* CONTACT FORM SCSS */
@@ -64,20 +148,21 @@ html {
 }
 
 .contact-container {
-  @include alpha-attribute('background-color', rgba(#000000, 0.4), #000000);
+  @include alpha-attribute('background-color', rgba(#000000, 0.6), #000000);
   input {
-    @include alpha-attribute('background-color', rgba(#FFFFFF, 0.1), #FFFFFF);
-    @include alpha-attribute('border-color', rgba(#FFFFFF, 0.1), #FFFFFF);
+    @include alpha-attribute('background-color', rgba(#FFFFFF, 0.2), #FFFFFF);
+    @include alpha-attribute('border-color', rgba(#FFFFFF, 0.2), #FFFFFF);
     color: #FFFFFF;
   }
   textarea {
-    @include alpha-attribute('background-color', rgba(#FFFFFF, 0.1), #FFFFFF);
-    @include alpha-attribute('border-color', rgba(#FFFFFF, 0.1), #FFFFFF);
+    @include alpha-attribute('background-color', rgba(#FFFFFF, 0.2), #FFFFFF);
+    @include alpha-attribute('border-color', rgba(#FFFFFF, 0.2), #FFFFFF);
     color: #FFFFFF;
   }
   button {
     background: none;
     color: white;
+    margin-bottom:15px;
   }
 }
 
@@ -118,6 +203,22 @@ div[ng-view].ng-leave {
 }
 
 /* Header shiz */
+.name-title {
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-left: 20px;
+  }
+
+  h1 {
+    color: white;
+    font-family: Quicksand;
+    padding: 20px;
+    margin: 0;
+    font-size: 30px;
+  }
+}
 .background {
   /*@include background-image($background-image-top);*/
   /*position: relative;
@@ -140,12 +241,7 @@ div[ng-view].ng-leave {
     /* border: 3px solid white; */
     color: white;
 
-    h1 {
-      font-family: Quicksand;
-      padding: 20px;
-      margin: 0;
-      font-size: 30px;
-    }
+
 
     nav {
       height: 40px;
@@ -267,13 +363,13 @@ div[ng-view].ng-leave {
 @media screen and (max-width: 525px) {
   @media screen and (max-height: 700px) {
     .home-content {
-      margin-top:225px;
+      margin-top:150px;
     }
   }
 }
 @media screen and (max-height: 630px) {
   .home-content {
-    margin-top:225px;
+    margin-top:150px;
   }
 }
 
@@ -339,7 +435,7 @@ body {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 730px;
+    max-width: 960px;
   }
 
   /* Remove the padding we set earlier */
