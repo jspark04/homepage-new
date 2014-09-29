@@ -1,12 +1,14 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 
 //My images
-$background-image-top: image-url('bw_back_small.jpg', false, false);
+$background-image-main: image-url('bw_back_medium.jpg', false, false);
+$background-image-contact: image-url('bw_back_medium.jpg', false, false);
 
 $default-background-size: 100% auto;
 $min-height-background-img: 600px;
 //My Overrides
-$font-family-sans-serif: Quicksand;
+$font-family-sans-serif: Open Sans;
+$link-color: #78a4ca;
 
 //My imports
 @import "compass/css3";
@@ -35,7 +37,68 @@ $font-family-sans-serif: Quicksand;
 
 //My stuff
 
-/* MAIN PAGE SCSS!!!!!!!!!!!! */
+html {
+  -webkit-transition: background-image 1.5s linear;
+  -moz-transition: background-image 1.5s linear;
+  -o-transition: background-image 1.5s linear;
+  -ms-transition: background-image 1.5s linear;
+  transition: background-image 1.5s linear;
+}
+
+/* CONTACT FORM SCSS */
+.contact-bg {
+  background: $background-image-contact no-repeat center center fixed;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  background-position: 50% 50%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.contact-container {
+  @include alpha-attribute('background-color', rgba(#000000, 0.4), #000000);
+  input {
+    @include alpha-attribute('background-color', rgba(#FFFFFF, 0.1), #FFFFFF);
+    @include alpha-attribute('border-color', rgba(#FFFFFF, 0.1), #FFFFFF);
+    color: #FFFFFF;
+  }
+  textarea {
+    @include alpha-attribute('background-color', rgba(#FFFFFF, 0.1), #FFFFFF);
+    @include alpha-attribute('border-color', rgba(#FFFFFF, 0.1), #FFFFFF);
+    color: #FFFFFF;
+  }
+  button {
+    background: none;
+    color: white;
+  }
+}
+
+/* INDEX PAGE SCSS!!!!!!!!!!!! */
+
+.main-bg {
+  background: $background-image-main no-repeat center center fixed;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  background-position: 50% 50%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 .full-page {
   position: absolute;
@@ -78,6 +141,7 @@ div[ng-view].ng-leave {
     color: white;
 
     h1 {
+      font-family: Quicksand;
       padding: 20px;
       margin: 0;
       font-size: 30px;
@@ -147,6 +211,9 @@ div[ng-view].ng-leave {
       nav li a {
         border-bottom: 1px solid #576979;
         border-right: 1px solid #576979;
+      }
+      .quickFixNoBottomLine {
+        border-bottom: none;
       }
       nav a {
         text-align: left;

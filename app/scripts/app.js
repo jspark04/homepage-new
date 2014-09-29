@@ -31,6 +31,14 @@ angular
         templateUrl: 'views/resume.html',
         controller: 'ResumeCtrl'
       })
+      .when('/contact', {
+        templateUrl: 'views/contact.html',
+        controller: 'ContactCtrl'
+      })
+      .when('/portfolio', {
+        templateUrl: 'views/portfolio.html',
+        controller: 'PortfolioCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

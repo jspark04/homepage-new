@@ -1,0 +1,43 @@
+<div class="container contact-container">
+  <div class="page-header">
+    <h1>Contact me</h1>
+  </div>
+  <div class="row">
+
+    <div class="col-md-4 col-md-push-8">
+      <h3>Via email</h3>
+      <span class="glyphicon glyphicon-envelope"></span> <a href="mailto:johnpark.rice&#64;gmail.com">johnpark.rice (at) gmail.com</a>
+    </div>
+
+    <div class="col-md-8 col-md-pull-4">
+      <h3>Via form</h3>
+      <form role="form" method="post" action="processForm.php" id="contactForm">
+        <div class="form-group">
+          <label for="inputName">Name</label>
+          <input type="text" class="form-control" id="inputName" name="inputName" placeholder="Enter name" required="required">
+        </div>
+        <div class="form-group">
+          <label for="inputEmail">Email address</label>
+          <input type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="inputMessage">Message</label>
+          <textarea class="form-control" rows="3" id="inputMessage" name="inputMessage" placeholder="Enter message"></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-default btn-block" id="submitButton">Submit</button>
+        </div>
+        <div class="alert alert-success" id="ajaxSuccess">
+          <h4>Success!</h4>
+          <p>Thank you for sending your message! I'll get back to you shortly.</p>
+        </div>
+        <div class="alert alert-danger" id="ajaxError">
+          <h4>Error!</h4>
+          <p>Server-side error on submission. Please re-submit or try again later. Thank you.</p>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>
+

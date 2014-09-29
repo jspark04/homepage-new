@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name homepageNewApp.controller:ResumeCtrl
+ * @name homepageNewApp.controller:PortfolioCtrl
  * @description
- * # ResumeCtrl
+ * # PortfolioCtrl
  * Controller of the homepageNewApp
  */
 angular.module('homepageNewApp')
-  .controller('ResumeCtrl', function ($scope) {
+  .controller('PortfolioCtrl', function ($scope) {
 
     $scope.test = 'test';
 
