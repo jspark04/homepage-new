@@ -1,13 +1,77 @@
-<div class="container contact-container">
+<div class="container portfolio-container">
   <div class="page-header">
     <h1>My work <small>projects, passions, musings</small></h1>
   </div>
+
   <div class="row">
-
     <div class="col-md-12">
-      <p>Currently under revision. Next expected release 10/2. Please try again soon!</p>
+      <!-- Nav tabs -->
+      <ul class="nav nav-pills nav-justified" role="tablist" id="tabs">
+        <li class="active"><a data-target="#writings" role="tab" data-toggle="tab">Writings</a></li>
+        <li><a data-target="#photo" role="tab" data-toggle="tab">Photography</a></li>
+        <li><a data-target="#misc" role="tab" data-toggle="tab">Misc. Projects</a></li>
+        <li><a data-target="#archive" role="tab" data-toggle="tab">Archive</a></li>
+      </ul>
     </div>
-
   </div>
+
+  <div class="row" id="tabcontent">
+    <div class="col-md-12">
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div class="tab-pane fade in active" id="writings">
+          <div class="list-group">
+            <a href="http://link.springer.com/article/10.1007%2Fs10295-012-1178-x" class="list-group-item">
+              <h4 class="list-group-item-heading">Synthesis of methyl ketones by metabolically engineered <em>Escherichia coli</em></h4>
+              <p class="list-group-item-text">Park, John et al. "Synthesis of methyl ketones by metabolically engineered <em>Escherichia coli</em>". Journal of Industrial Microbiology & Biotechnology 2012, DOI: 10.1007/s10295-012-1178-x. </p>
+            </a>
+            <a href="ms_thesis_johnpark.pdf" class="list-group-item">
+              <h4 class="list-group-item-heading">Master's Thesis</h4>
+              <p class="list-group-item-text">Entitled "Engineering <em>Escherichia coli</em> for the production of polyketide-based platform chemicals". A thesis submitted
+                in partial fulfillment of the requirements for the degree of
+                Master of Science at Rice University.</p>
+            </a>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="photo">
+            <div class="list-group">
+              <a href="" class="list-group-item">
+                <h4 class="list-group-item-heading">2014 Florida Keys Trip</h4>
+                <p class="list-group-item-text">Currently in development.</p>
+              </a>
+              <a href="" class="list-group-item">
+                <h4 class="list-group-item-heading">2014 New Orleans</h4>
+                <p class="list-group-item-text">TODO: Upload</p>
+              </a>
+              <a href="" class="list-group-item">
+                <h4 class="list-group-item-heading">Family Photoshoot (or "Two Cats and a Dog")</h4>
+                <p class="list-group-item-text">TODO: Upload</p>
+              </a>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="misc">
+            <div class="list-group">
+              <a href="" class="list-group-item">
+                <h4 class="list-group-item-heading">Money Owed Tracker Mobile App</h4>
+                <p class="list-group-item-text">Currently in development.</p>
+              </a>
+              <a href="" class="list-group-item">
+                <h4 class="list-group-item-heading">This Website</h4>
+                <p class="list-group-item-text">Made with Yeoman, AngularJS, Bootstrap, and SASS/Compass.</p>
+              </a>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="archive">
+          <div class="list-group">
+            <a href="" class="list-group-item">
+              <h4 class="list-group-item-heading">Past Websites</h4>
+              <p class="list-group-item-text">TODO: Upload.</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
 

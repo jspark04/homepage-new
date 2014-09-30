@@ -4,12 +4,14 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 $background-image-main: image-url('bw_back_medium.jpg', false, false);
 $background-image-resume: image-url('resume_back_medium.jpg', false, false);
 $background-image-contact: image-url('contact_back_medium.jpg', false, false);
+$background-image-portfolio: image-url('resume_back_medium.jpg', false, false);
 
 $default-background-size: 100% auto;
 $min-height-background-img: 600px;
 //My Overrides
 $font-family-sans-serif: Open Sans;
 $link-color: #78a4ca;
+$brand-primary: #466785;
 
 //My imports
 @import "compass/css3";
@@ -43,6 +45,56 @@ html {
   -o-transition: background-image 1.0s ease-in-out;
   -ms-transition: background-image 1.0s ease-in-out;
   transition: background-image 1.0s ease-in-out;
+}
+
+/* PORTFOLIO SCSS */
+.portfolio-bg {
+  background: $background-image-portfolio no-repeat center center fixed;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  background-position: 50% 50%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.portfolio-container {
+  @include alpha-attribute('background-color', rgba(#000000, 0.6), #000000);
+
+  #tabs li:hover {
+    cursor: pointer;
+  }
+
+  #tabcontent {
+    margin-top:20px;
+  }
+
+  .tab-content {
+
+  }
+
+  .list-group-item {
+    color:white;
+    @include alpha-attribute('background-color', rgba(#000000, 0.4), #000000);
+    @include alpha-attribute('border-color', rgba(#FFFFFF, 0.1), #FFFFFF);
+
+  }
+  a.list-group-item .list-group-item-heading {
+    color:white;
+  }
+
+  a.list-group-item:hover, a.list-group-item:focus {
+    color: white;
+    @include alpha-attribute('background-color', rgba(#000000, 0.6), #000000);
+    @include alpha-attribute('border-color', rgba(#FFFFFF, 0.1), #FFFFFF);
+  }
+
 }
 
 /* RESUME SCSS */

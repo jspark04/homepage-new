@@ -14,6 +14,6 @@ angular.module('homepageNewApp')
 
     //Set background images
     $('html').removeClass();
-    $('html').addClass('resume-bg');
+    $('html').addClass('portfolio-bg');
 
   });
