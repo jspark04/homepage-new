@@ -39,6 +39,18 @@ angular
         templateUrl: 'views/portfolio.html',
         controller: 'PortfolioCtrl'
       })
+      .when('/pastwebsites', {
+        templateUrl: 'views/pastwebsites.html',
+        controller: 'PastwebsitesCtrl'
+      })
+      .when('/pastartwork', {
+        templateUrl: 'views/pastartwork.html',
+        controller: 'PastartworkCtrl'
+      })
+      .when('/florida-keys', {
+        templateUrl: 'views/florida-keys.html',
+        controller: 'FloridaKeysCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
